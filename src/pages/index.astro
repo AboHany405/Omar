@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogContent from '../components/BlogContent.astro';
+import { fastingContent } from '../data/fasting-content';
+---
+
+<Layout title="The Science of Fasting | Health & Wellness Blog">
+  <main>
+    <BlogHeader 
+      title={fastingContent.header.title}
+      subtitle={fastingContent.header.subtitle}
+    />
+    <BlogContent sections={fastingContent.sections} />
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: 100vh;
+  }
+</style>
